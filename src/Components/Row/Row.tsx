@@ -1,7 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import instance from "../../axios";
 import { MovieType } from "../../types";
-import { MovieCard } from "../Movie Card/MovieCard";
+
+import classes from "./Row.module.css";
 
 type PropsType = { title: string; fetchUrl: string };
 
@@ -17,8 +18,6 @@ export const Row: FC<PropsType> = ({ title, fetchUrl }) => {
         },
       });
 
-      console.log(response.data.results);
-
       setMovies(response.data.results);
       setIsLoading(false);
     };
@@ -27,16 +26,25 @@ export const Row: FC<PropsType> = ({ title, fetchUrl }) => {
   }, [fetchUrl]);
 
   return (
-    <section>
+    <section className={classes["movie-row"]}>
       <h2>{title}</h2>
-      {!isLoading &&
-        movies!.map((movie: MovieType) => (
-          <MovieCard
-            key={movie.id}
-            image={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-            title={movie.name}
-          />
-        ))}
+      <div>
+        {!isLoading &&
+          movies!.map((movie: MovieType) => (
+            /*
+            <MovieCard
+              key={movie.id}
+              image={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+              title={movie.name}
+            />
+            */
+
+            <img
+              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+              width={200}
+            />
+          ))}
+      </div>
     </section>
   );
 };
