@@ -27,6 +27,7 @@ export const Row: FC<PropsType> = ({ title, fetchUrl }) => {
   return (
     <section>
       <h2>{title}</h2>
+      //{!isLoading && movies.map}
     </section>
   );
 };
