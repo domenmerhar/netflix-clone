@@ -1,10 +1,12 @@
 import { FC, useEffect, useState } from "react";
 import instance from "../../axios";
+import { MovieType } from "../../types";
+import { MovieCard } from "../Movie Card/MovieCard";
 
 type PropsType = { title: string; fetchUrl: string };
 
 export const Row: FC<PropsType> = ({ title, fetchUrl }) => {
-  const [movies, setMovies] = useState(null);
+  const [movies, setMovies] = useState<MovieType[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -27,7 +29,14 @@ export const Row: FC<PropsType> = ({ title, fetchUrl }) => {
   return (
     <section>
       <h2>{title}</h2>
-      //{!isLoading && movies.map}
+      {!isLoading &&
+        movies!.map((movie: MovieType) => (
+          <MovieCard
+            key={movie.id}
+            image={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+            title={movie.name}
+          />
+        ))}
     </section>
   );
 };

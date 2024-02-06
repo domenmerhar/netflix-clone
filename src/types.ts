@@ -1,4 +1,4 @@
-type TVShow = {
+export type MovieType = {
   adult: boolean;
   backdrop_path: string | null;
   genre_ids: number[];
