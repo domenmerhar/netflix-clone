@@ -1,5 +1,7 @@
 import { FC } from "react";
 
+import classes from "./MovieCard.module.css";
+
 type PropsType = {
   image: string;
   title: string;
@@ -8,7 +10,7 @@ type PropsType = {
 
 export const MovieCard: FC<PropsType> = ({ image, title, width = 200 }) => {
   return (
-    <div>
+    <div className={classes["movie-card"]}>
       <img src={image} alt={title} style={{ width }} />
     </div>
   );

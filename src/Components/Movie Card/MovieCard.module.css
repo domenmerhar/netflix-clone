@@ -1,0 +1,11 @@
+.movie-card {
+  overflow: hidden;
+}
+
+.movie-card img {
+  transition: 300ms;
+}
+
+.movie-card img:hover {
+  scale: 1.1;
+}
