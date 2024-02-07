@@ -1,10 +1,12 @@
 .movie-card {
-  overflow: hidden;
   flex: 1;
+  display: flex;
+  overflow-y: none;
 }
 
 .movie-card img {
   transition: 300ms;
+  height: 100%;
 }
 .movie-card img:hover {
   scale: 1.1;

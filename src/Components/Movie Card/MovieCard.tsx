@@ -10,11 +10,8 @@ type PropsType = {
 
 export const MovieCard: FC<PropsType> = ({ image, title, height = 300 }) => {
   return (
-    <img
-      className={classes["movie-card"]}
-      src={image}
-      alt={title}
-      style={{ height }}
-    />
+    <div className={classes["movie-card"]} style={{ height: height * 1.1 }}>
+      <img src={image} alt={title} style={{ height }} />
+    </div>
   );
 };
