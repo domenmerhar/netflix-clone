@@ -46,16 +46,18 @@ export const Row: FC<PropsType> = ({
       <div style={{ gap }}>
         {isLoading && <Spinnner width={spinnerHeight || width} />}
         {!isLoading &&
-          movies!.map((movie: MovieType) => (
-            <MovieCard
-              key={movie.id}
-              image={`https://image.tmdb.org/t/p/original/${
-                isBackdrop ? movie.backdrop_path : movie.poster_path
-              }`}
-              title={movie.name}
-              width={width}
-            />
-          ))}
+          movies!.map((movie: MovieType) =>
+            movie.backdrop_path && movie.poster_path ? (
+              <MovieCard
+                key={movie.id}
+                image={`https://image.tmdb.org/t/p/original/${
+                  isBackdrop ? movie.backdrop_path : movie.poster_path
+                }`}
+                title={movie.name}
+                width={width}
+              />
+            ) : null
+          )}
       </div>
     </section>
   );
