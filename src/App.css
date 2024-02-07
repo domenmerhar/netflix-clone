@@ -6,6 +6,10 @@
   text-align: center;
 }
 */
+
+#root {
+  overflow-x: hidden;
+}
 .logo {
   height: 6em;
   padding: 1.5em;

@@ -8,10 +8,10 @@ type PropsType = {
   width?: number;
 };
 
-export const MovieCard: FC<PropsType> = ({ image, title, width = 300 }) => {
+export const MovieCard: FC<PropsType> = ({ image, title, width = 200 }) => {
   return (
     <div className={classes["movie-card"]} style={{ width: width * 1.1 }}>
-      <img src={image} alt={title} style={{ width }} />
+      <img src={image} alt={title} style={{ maxWidth: width }} />
     </div>
   );
 };

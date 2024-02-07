@@ -1,7 +1,7 @@
 .movie-card {
   flex: 1;
   display: flex;
-  overflow-y: none;
+  overflow-y: clip;
 }
 
 .movie-card img {
