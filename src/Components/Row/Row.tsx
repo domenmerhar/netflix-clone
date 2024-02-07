@@ -4,6 +4,7 @@ import { MovieType } from "../../types";
 
 import classes from "./Row.module.css";
 import { MovieCard } from "../Movie Card/MovieCard";
+import { Spinnner } from "../Spinnner/Spinnner";
 
 type PropsType = {
   title: string;
@@ -11,6 +12,7 @@ type PropsType = {
   gap?: number;
   isBackdrop?: boolean;
   width?: number;
+  spinnerHeight?: number;
 };
 
 export const Row: FC<PropsType> = ({
@@ -19,6 +21,7 @@ export const Row: FC<PropsType> = ({
   gap = 20,
   isBackdrop = true,
   width = 200,
+  spinnerHeight,
 }) => {
   const [movies, setMovies] = useState<MovieType[] | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -37,11 +40,11 @@ export const Row: FC<PropsType> = ({
 
     fetchData();
   }, [fetchUrl]);
-
   return (
     <section className={classes["movie-row"]}>
       <h2>{title}</h2>
       <div style={{ gap }}>
+        {isLoading && <Spinnner width={spinnerHeight || width} />}
         {!isLoading &&
           movies!.map((movie: MovieType) => (
             <MovieCard

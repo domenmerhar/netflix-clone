@@ -12,13 +12,41 @@ function App() {
         fetchUrl={requests.fetchNetflixOriginals}
         isBackdrop={false}
       />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romannnce Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <Row
+        title="Trending Now"
+        fetchUrl={requests.fetchTrending}
+        spinnerHeight={112}
+      />
+      <Row
+        title="Top Rated"
+        fetchUrl={requests.fetchTopRated}
+        spinnerHeight={112}
+      />
+      <Row
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+        spinnerHeight={112}
+      />
+      <Row
+        title="Comedy Movies"
+        fetchUrl={requests.fetchComedyMovies}
+        spinnerHeight={112}
+      />
+      <Row
+        title="Horror Movies"
+        fetchUrl={requests.fetchHorrorMovies}
+        spinnerHeight={112}
+      />
+      <Row
+        title="Romannnce Movies"
+        fetchUrl={requests.fetchRomanceMovies}
+        spinnerHeight={112}
+      />
+      <Row
+        title="Documentaries"
+        fetchUrl={requests.fetchDocumentaries}
+        spinnerHeight={112}
+      />
     </>
   );
 }
