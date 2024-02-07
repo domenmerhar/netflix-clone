@@ -5,13 +5,13 @@ import classes from "./MovieCard.module.css";
 type PropsType = {
   image: string;
   title: string;
-  height?: number;
+  width?: number;
 };
 
-export const MovieCard: FC<PropsType> = ({ image, title, height = 300 }) => {
+export const MovieCard: FC<PropsType> = ({ image, title, width = 300 }) => {
   return (
-    <div className={classes["movie-card"]} style={{ height: height * 1.1 }}>
-      <img src={image} alt={title} style={{ height }} />
+    <div className={classes["movie-card"]} style={{ width: width * 1.1 }}>
+      <img src={image} alt={title} style={{ width }} />
     </div>
   );
 };
