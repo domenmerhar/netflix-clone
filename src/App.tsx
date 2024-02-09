@@ -3,10 +3,12 @@ import requests from "./requests";
 import { Row } from "./Components/Row/Row";
 
 import "./App.css";
+import { Hero } from "./Components/Hero/Hero";
 
 function App() {
   return (
     <>
+      <Hero />
       <Row
         title="Netflix Originals"
         fetchUrl={requests.fetchNetflixOriginals}
