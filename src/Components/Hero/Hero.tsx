@@ -38,6 +38,7 @@ export const Hero = () => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
         className={classes.hero}
       >
+        <div className={classes["fade-bottom"]}></div>
         <div>
           <h1> {movie!.name}</h1>
           <div>
