@@ -1,0 +1,33 @@
+.hero {
+  background-position: center;
+  height: 560px;
+}
+
+.hero > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  padding-left: 32px;
+}
+
+.hero h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  flex: 0;
+}
+
+.hero p {
+  width: 55ch;
+  font-weight: 800;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hero button {
+  margin: 10px 16px 10px 0;
+  border-radius: 0;
+  font-size: 20px;
+}
