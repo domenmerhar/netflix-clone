@@ -8,7 +8,7 @@ export const NavigationBar = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 600) return setHasBackground(true);
+      if (window.scrollY > 200) return setHasBackground(true);
       setHasBackground(false);
     });
 
