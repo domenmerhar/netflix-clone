@@ -5,6 +5,7 @@ import { Row } from "./Components/Row/Row";
 import "./App.css";
 import { Hero } from "./Components/Hero/Hero";
 import { NavigationBar } from "./Components/NavigationBar/NavigationBar";
+import { NetflixLogo } from "./Components/NetflixLogo/NetflixLogo";
 
 function App() {
   return (
