@@ -2,6 +2,7 @@
   position: fixed;
   z-index: 1;
   width: 1440px;
+  transition: background-color 200ms;
 }
 
 .navigation-bar > div {
@@ -13,6 +14,12 @@
 
 .navigation-bar > div > * {
   padding: 24px 48px;
+  cursor: pointer;
+  transition: scale 200ms;
+}
+
+.navigation-bar > div > *:hover {
+  scale: 1.1;
 }
 
 .navigation-bar--black {
