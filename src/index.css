@@ -29,6 +29,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   max-width: 100vw;
+  box-sizing: content-box;
 }
 
 h1 {
