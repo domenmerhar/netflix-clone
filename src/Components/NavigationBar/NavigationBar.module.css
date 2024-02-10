@@ -1,6 +1,6 @@
 .navigation-bar {
   position: fixed;
-  z-index: 100;
+  z-index: 1;
   width: 1440px;
 }
 
@@ -13,4 +13,12 @@
 
 .navigation-bar > div > * {
   padding: 24px 48px;
+}
+
+.navigation-bar--black {
+  background-color: #242424;
+}
+
+.navigation-bar--transparent {
+  background-color: transparent;
 }

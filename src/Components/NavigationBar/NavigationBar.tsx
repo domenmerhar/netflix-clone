@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NetflixLogo } from "../NetflixLogo/NetflixLogo";
 
 import classes from "./NavigationBar.module.css";
 
 export const NavigationBar = () => {
+  const [hasBackground, setHasBackground] = useState<boolean>(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 600) return setHasBackground(true);
+      setHasBackground(false);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", () => {});
+    };
+  }, []);
+
   return (
-    <nav className={classes["navigation-bar"]}>
+    <nav
+      className={`${classes["navigation-bar"]} ${
+        hasBackground
+          ? classes["navigation-bar--black"]
+          : classes["navigation-bar--transparent"]
+      }`}
+    >
       <div>
         <NetflixLogo />
         <img
