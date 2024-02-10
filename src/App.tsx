@@ -40,7 +40,7 @@ function App() {
         spinnerHeight={112}
       />
       <Row
-        title="Romannnce Movies"
+        title="Romance Movies"
         fetchUrl={requests.fetchRomanceMovies}
         spinnerHeight={112}
       />
