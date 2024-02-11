@@ -7,6 +7,20 @@ import { Hero } from "./Components/Hero/Hero";
 import { NavigationBar } from "./Components/NavigationBar/NavigationBar";
 
 function App() {
+  const url = "https://api.themoviedb.org/3/movie/238?language=en-US";
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMjQyMmI0Mzk4YTBmNjI0NmVjZmE4MjY1OWNmYzdjNiIsInN1YiI6IjY1YmZkN2JkYjMzOTAzMDE4Nzk3ZDhjZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.B5PRTgFRvWhLYioOudmPpTgw_jaMzleX-ApXmKkl8xQ",
+    },
+  };
+
+  fetch(url, options)
+    .then((res) => res.json())
+    .then((json) => console.log(json))
+    .catch((err) => console.error("error:" + err));
   return (
     <>
       <NavigationBar />

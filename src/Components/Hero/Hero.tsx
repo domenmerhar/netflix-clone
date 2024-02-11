@@ -30,8 +30,6 @@ export const Hero = () => {
       ? `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
       : undefined;
 
-  console.log(backgroundImage);
-
   return (
     movie && (
       <section

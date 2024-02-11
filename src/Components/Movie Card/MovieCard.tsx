@@ -6,11 +6,21 @@ type PropsType = {
   image: string;
   title: string;
   width?: number;
+  handleClick: () => () => void;
 };
 
-export const MovieCard: FC<PropsType> = ({ image, title, width = 200 }) => {
+export const MovieCard: FC<PropsType> = ({
+  image,
+  title,
+  width = 200,
+  handleClick,
+}) => {
   return (
-    <div className={classes["movie-card"]} style={{ width: width * 1.1 }}>
+    <div
+      onClick={() => handleClick()}
+      className={classes["movie-card"]}
+      style={{ width: width * 1.1 }}
+    >
       <img src={image} alt={title} style={{ maxWidth: width }} />
     </div>
   );
