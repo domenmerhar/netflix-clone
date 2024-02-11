@@ -90,12 +90,14 @@ export const Row: FC<PropsType> = ({
       <div style={{ gap }} className={classes["movie-row__movies"]}>
         {isLoading && <Spinnner width={spinnerHeight || width} />}
         {!isLoading &&
-          movies!.map((movie: MovieType) =>
-            movie.backdrop_path && movie.poster_path ? (
+          movies!.map((movie: MovieType) => {
+            const handleClickCard = handleClick(
+              movie.name || movie.original_name || movie.original_title
+            );
+
+            return movie.backdrop_path && movie.poster_path ? (
               <MovieCard
-                handleClick={handleClick(
-                  movie.name || movie.original_name || movie.original_title
-                )}
+                handleClick={handleClickCard}
                 key={movie.id}
                 image={`https://image.tmdb.org/t/p/original/${
                   isBackdrop ? movie.backdrop_path : movie.poster_path
@@ -105,9 +107,10 @@ export const Row: FC<PropsType> = ({
                 }
                 width={width}
               />
-            ) : null
-          )}
+            ) : null;
+          })}
       </div>
+
       {videoID && (
         <div>
           <YouTube

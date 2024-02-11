@@ -6,7 +6,7 @@ type PropsType = {
   image: string;
   title: string;
   width?: number;
-  handleClick: () => () => void;
+  handleClick: () => Promise<void> | void;
 };
 
 export const MovieCard: FC<PropsType> = ({
