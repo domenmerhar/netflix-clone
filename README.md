@@ -1,31 +1,32 @@
-# React + TypeScript + Vite
+# Netflix Clone - Interactive Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+A Netflix clone app that allows users to browse and watch movie trailers with interactive movie rows and a featured movie section. Upon clicking on a movie thumbnail, the app plays the selected movie's trailer. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+1. **Interactive Movie Rows**: Display rows of movies with interactive thumbnails that users can click on to play the trailers.
+2. **Featured Movie Section**: Showcases a prominently featured movie at the top of the page with its details.
+3. **Dynamic Navigation Bar**: A dynamic navigation bar allows users to navigate to different sections of the app.
+4. **Seamless Trailer Playback**: Integrates with react-youtube to seamlessly play trailers within the app interface.
+5. **Responsive Design**: Ensures the app is responsive and works well across various devices and screen sizes.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+##APIs Used
 
-- Configure the top-level `parserOptions` property like this:
+- **TMDB (The Movie Database)**: An API employed for retrieving comprehensive movie data.
+- **Youtube**: Utilized as an API for sourcing movie trailers.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Technologies Used
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# netflix-clone
+- **TypeScript**: A statically typed superset of JavaScript that enhances code maintainability.
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A next-generation frontend tooling that provides fast development and server-side rendering capabilities.
+- **React YouTube**: A React component for embedding YouTube videos.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **HTML/CSS**: Standard markup and styling languages for building web interfaces.
+- **ESLint**: A static code analysis tool for identifying problematic patterns in JavaScript code.
+
+## How to Use
+
+Simply visit the following link: [Netflix Clone](https://domenmerhar.github.io/netflix-clone/)
