@@ -6,18 +6,23 @@
   font-weight: 800;
 }
 
-.movie-row > div {
+.movie-row__movies {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
   overflow-y: hidden;
   width: 100%;
-}
 
-.movie-row > div {
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
-.movie-row > div::-webkit-scrollbar {
-  display: none; /* Safari and Chrome */
+
+.movie-row__video-player {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-row__video-player > * {
+  transform: translateX(-40%);
 }

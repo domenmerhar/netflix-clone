@@ -9,7 +9,7 @@
 
 #root {
   overflow-x: hidden;
-  max-width: 1440px;
+  max-width: var(--page-width);
 }
 .logo {
   height: 6em;

@@ -19,7 +19,7 @@ type PropsType = {
 
 const youtubeOptions = {
   height: "390",
-  width: "100%",
+  width: "600",
   playerVars: {
     autoplay: 1,
   },
@@ -87,7 +87,7 @@ export const Row: FC<PropsType> = ({
   return (
     <section className={classes["movie-row"]}>
       <h2>{title}</h2>
-      <div style={{ gap }}>
+      <div style={{ gap }} className={classes["movie-row__movies"]}>
         {isLoading && <Spinnner width={spinnerHeight || width} />}
         {!isLoading &&
           movies!.map((movie: MovieType) =>
@@ -108,7 +108,15 @@ export const Row: FC<PropsType> = ({
             ) : null
           )}
       </div>
-      {videoID && <YouTube opts={youtubeOptions} videoId={videoID} />}
+      {videoID && (
+        <div>
+          <YouTube
+            opts={youtubeOptions}
+            videoId={videoID}
+            className={classes["movie-row__video-player"]}
+          />
+        </div>
+      )}
     </section>
   );
 };

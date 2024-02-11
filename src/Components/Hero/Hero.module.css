@@ -1,7 +1,8 @@
 .hero {
-  background-position: center;
+  background-position: center 30%;
   height: 660px;
   position: relative;
+  width: 100%;
 }
 
 .hero > div:last-child {
@@ -13,7 +14,7 @@
 }
 
 .hero > div:first-child {
-  width: 1440px;
+  width: 100%;
 }
 
 .hero > div > * {
