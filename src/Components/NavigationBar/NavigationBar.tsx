@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { NetflixLogo } from "../NetflixLogo/NetflixLogo";
 
 import classes from "./NavigationBar.module.css";
