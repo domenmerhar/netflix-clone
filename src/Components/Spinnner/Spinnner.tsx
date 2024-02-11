@@ -12,7 +12,8 @@ export const Spinnner: FC<PropsType> = ({ width = 200, color = "red" }) => {
       className={classes["spinner"]}
       style={{
         width,
-        height: width,
+        maxHeight: `${width}px`,
+        minHeight: `${width}px`,
         borderColor: `transparent ${color} transparent ${color}`,
       }}
     ></div>
