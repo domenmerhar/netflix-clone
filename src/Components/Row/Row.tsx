@@ -7,6 +7,7 @@ import { Spinnner } from "../Spinnner/Spinnner";
 import YouTube from "react-youtube";
 import instance from "../../axios";
 import axios from "axios";
+import { fetchMovie } from "../../Util/fetchMovie";
 
 type PropsType = {
   title: string;
@@ -39,23 +40,6 @@ export const Row: FC<PropsType> = ({
   const [currentMovie, setCurrentMovie] = useState<string>("");
 
   const handleClick = (movieName: string) => {
-    const fetchMovie = async (searchQuery: string) => {
-      console.log("query: ", searchQuery);
-      const { data }: { data: SearchListResponse } = await axios.get(
-        "https://www.googleapis.com/youtube/v3/search",
-        {
-          params: {
-            part: "snippet",
-            maxResults: 1,
-            key: "AIzaSyAa90xYjDuWU0QRwuxhunJqBxJW33YdFWQ",
-            q: `${searchQuery} trailer`,
-          },
-        }
-      );
-
-      return data.items[0].id.videoId;
-    };
-
     return async () => {
       if (currentMovie === movieName) {
         setCurrentMovie("");
