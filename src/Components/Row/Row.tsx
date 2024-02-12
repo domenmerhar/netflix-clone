@@ -1,12 +1,11 @@
 import { FC, useEffect, useState } from "react";
-import { MovieType, SearchListResponse } from "../../types";
+import { MovieType } from "../../types";
 
 import classes from "./Row.module.css";
 import { MovieCard } from "../Movie Card/MovieCard";
 import { Spinnner } from "../Spinnner/Spinnner";
 import YouTube from "react-youtube";
 import instance from "../../axios";
-import axios from "axios";
 import { fetchMovie } from "../../Util/fetchMovie";
 
 type PropsType = {
@@ -79,16 +78,19 @@ export const Row: FC<PropsType> = ({
               movie.name || movie.original_name || movie.original_title
             );
 
+            const cardImage = `https://image.tmdb.org/t/p/original/${
+              isBackdrop ? movie.backdrop_path : movie.poster_path
+            }`;
+
+            const title =
+              movie.name || movie.original_name || movie.original_title;
+
             return movie.backdrop_path && movie.poster_path ? (
               <MovieCard
                 handleClick={handleClickCard}
                 key={movie.id}
-                image={`https://image.tmdb.org/t/p/original/${
-                  isBackdrop ? movie.backdrop_path : movie.poster_path
-                }`}
-                title={
-                  movie.name || movie.original_name || movie.original_title
-                }
+                image={cardImage}
+                title={title}
                 width={width}
               />
             ) : null;
