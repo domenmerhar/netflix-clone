@@ -7,6 +7,7 @@ import { Spinnner } from "../Spinnner/Spinnner";
 import YouTube from "react-youtube";
 import instance from "../../axios";
 import { fetchMovie } from "../../Util/fetchMovie";
+import { youtubeOptions } from "../../Util/youtubeOptions";
 
 type PropsType = {
   title: string;
@@ -15,14 +16,6 @@ type PropsType = {
   isBackdrop?: boolean;
   width?: number;
   spinnerHeight?: number;
-};
-
-const youtubeOptions = {
-  height: "390",
-  width: "600",
-  playerVars: {
-    autoplay: 1,
-  },
 };
 
 export const Row: FC<PropsType> = ({
