@@ -1,0 +1,9 @@
+.video-player {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.video-player > * {
+  transform: translateX(-40%);
+}

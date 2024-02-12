@@ -4,10 +4,9 @@ import { MovieType } from "../../types";
 import classes from "./Row.module.css";
 import { MovieCard } from "../Movie Card/MovieCard";
 import { Spinner } from "../Spinner/Spinner";
-import YouTube from "react-youtube";
 import instance from "../../axios";
 import { fetchMovie } from "../../Util/fetchMovie";
-import { youtubeOptions } from "../../Util/youtubeOptions";
+import { VideoPlayer } from "../VideoPlayer/VideoPlayer";
 
 type PropsType = {
   title: string;
@@ -88,13 +87,7 @@ export const Row: FC<PropsType> = ({
     });
 
   const videoPlayer = videoID && (
-    <div>
-      <YouTube
-        opts={youtubeOptions}
-        videoId={videoID}
-        className={classes["movie-row__video-player"]}
-      />
-    </div>
+    <VideoPlayer videoID={videoID} key={videoID} />
   );
 
   return (

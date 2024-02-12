@@ -16,13 +16,3 @@
   -ms-overflow-style: none; /* Internet Explorer 10+ */
   scrollbar-width: none; /* Firefox */
 }
-
-.movie-row__video-player {
-  padding-top: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.movie-row__video-player > * {
-  transform: translateX(-40%);
-}
